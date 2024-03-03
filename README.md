@@ -1,4 +1,6 @@
 # PointCloudCompensation
+##DIY scanner Calibration
+
 Applys error compensation to point clouds taken with a laser scanner (TLS).
 
 The program can read PTX and Faro FLS, applies systemic error compensation, and outputs PTX files.
