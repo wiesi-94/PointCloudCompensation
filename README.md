@@ -1,5 +1,5 @@
 # PointCloudCompensation
-##DIY scanner Calibration
+## DIY scanner Calibration
 
 Applys error compensation to point clouds taken with a laser scanner (TLS).
 
