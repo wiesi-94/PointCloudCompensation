@@ -38,6 +38,9 @@ Partial Class Form1
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.LB_Status = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BT_Del = New System.Windows.Forms.Button()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,9 +58,9 @@ Partial Class Form1
         Me.ListBox1.FormattingEnabled = True
         Me.ListBox1.HorizontalScrollbar = True
         Me.ListBox1.ItemHeight = 15
-        Me.ListBox1.Location = New System.Drawing.Point(12, 41)
+        Me.ListBox1.Location = New System.Drawing.Point(12, 71)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(162, 214)
+        Me.ListBox1.Size = New System.Drawing.Size(162, 184)
         Me.ListBox1.TabIndex = 0
         '
         'BT_Read
@@ -113,7 +116,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PropertyGrid1.Location = New System.Drawing.Point(180, 12)
         Me.PropertyGrid1.Name = "PropertyGrid1"
-        Me.PropertyGrid1.Size = New System.Drawing.Size(361, 336)
+        Me.PropertyGrid1.Size = New System.Drawing.Size(361, 310)
         Me.PropertyGrid1.TabIndex = 24
         '
         'TextBox1
@@ -135,7 +138,7 @@ Partial Class Form1
         Me.BT_Save.Name = "BT_Save"
         Me.BT_Save.Size = New System.Drawing.Size(361, 23)
         Me.BT_Save.TabIndex = 26
-        Me.BT_Save.Text = "Save to File"
+        Me.BT_Save.Text = "Save compensation to file"
         Me.BT_Save.UseVisualStyleBackColor = True
         '
         'TextBox2
@@ -154,7 +157,7 @@ Partial Class Form1
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.LB_Status})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 494)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(553, 22)
@@ -167,11 +170,39 @@ Partial Class Form1
         Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(71, 17)
         Me.ToolStripStatusLabel1.Text = "© Stefan W."
         '
+        'LB_Status
+        '
+        Me.LB_Status.Name = "LB_Status"
+        Me.LB_Status.Size = New System.Drawing.Size(436, 17)
+        Me.LB_Status.Spring = True
+        Me.LB_Status.Text = "Wait for start"
+        Me.LB_Status.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(180, 328)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(361, 23)
+        Me.Button1.TabIndex = 29
+        Me.Button1.Text = "Inclinometer calculation dialog"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'BT_Del
+        '
+        Me.BT_Del.Location = New System.Drawing.Point(12, 41)
+        Me.BT_Del.Name = "BT_Del"
+        Me.BT_Del.Size = New System.Drawing.Size(162, 23)
+        Me.BT_Del.TabIndex = 30
+        Me.BT_Del.Text = "Remove Files"
+        Me.BT_Del.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(553, 516)
+        Me.Controls.Add(Me.BT_Del)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.BT_Save)
@@ -208,4 +239,7 @@ Partial Class Form1
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents StatusStrip1 As StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As ToolStripStatusLabel
+    Friend WithEvents Button1 As Button
+    Friend WithEvents BT_Del As Button
+    Friend WithEvents LB_Status As ToolStripStatusLabel
 End Class
